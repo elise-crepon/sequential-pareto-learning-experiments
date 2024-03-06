@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+plt.rcParams['pdf.fonttype'] = 42
+plt.rcParams['ps.fonttype'] = 42
 plt.rcParams.update({'font.size': 32})
 plt.rcParams.update({'figure.figsize': (15, 10)})
 scaling = 5
@@ -41,4 +42,4 @@ if __name__ == '__main__':
 	for line in leg.get_lines():
 		line.set_linestyle('-')
 
-	plt.show()
+	plt.savefig('../../writeup/figs/complexityexp.pdf')

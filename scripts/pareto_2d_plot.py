@@ -1,8 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-plt.rcParams.update({'font.size': 36})
+plt.rcParams['pdf.fonttype'] = 42
+plt.rcParams['ps.fonttype'] = 42
+plt.rcParams.update({'font.size': 45})
 plt.rcParams.update({'figure.figsize': (30, 10)})
 scaling = 4
 params = [
@@ -96,13 +97,13 @@ def get_add_cost_(μ0, w0, μp, wp):
 			sd[i]+td[i]/b[0], sd[i], sd[i]+td[i]/b[1]])
 		y = -b[0] *np.abs(sd[i] - x) + td[i]
 		line, = plt.plot(x, y, color='red', linestyle='--')
-	line.set_label('t₁,t₂,t₃')
-	plt.plot(plots[:,0], plots[:,1], label='t*', lw=8.)
+	line.set_label(r'$t_1,t_2,t_3$')
+	plt.plot(plots[:,0], plots[:,1], label=r'$t^*$', lw=8.)
 
-	plt.xticks(list(sd), ['s₁', 's₂', 's₃'] )
+	plt.xticks(list(sd), [r'$s_1$', r'$s_2$', r'$s_3$'] )
 	plt.yticks([0,1,2,3])
 	plt.legend()
-	plt.show()
+	plt.savefig('../../writeup/figs/2d-example.pdf')
 
 
 if __name__ == '__main__':
