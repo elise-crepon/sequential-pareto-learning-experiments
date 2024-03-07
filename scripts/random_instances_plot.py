@@ -5,6 +5,7 @@ plt.rcParams['pdf.fonttype'] = 42
 plt.rcParams['ps.fonttype'] = 42
 plt.rcParams.update({'font.size': 32})
 plt.rcParams.update({'figure.figsize': (15, 10)})
+plt.subplots_adjust(bottom=0.125)
 scaling = 5
 params = [
   'lines.linewidth', 'axes.linewidth',
